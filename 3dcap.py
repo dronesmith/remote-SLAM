@@ -3,11 +3,18 @@ import cv2
 import imutils
 import numpy as np;
 import time
+import sys
 from matplotlib import pyplot as plt
 
 
 # Read image
 #im = cv2.imread("images/photo1.jpg", cv2.IMREAD_GRAYSCALE)
+
+
+print 'Number of arguments:', len(sys.argv), 'arguments.'
+print 'Argument List:', str(sys.argv)
+
+
 camera = cv2.VideoCapture(0)
 (grabbed, im) = camera.read()
 height, width, chan = np.shape(im)
